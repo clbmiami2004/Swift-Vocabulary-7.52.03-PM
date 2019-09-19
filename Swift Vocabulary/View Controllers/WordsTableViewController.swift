@@ -13,7 +13,10 @@ class WordsTableViewController: UITableViewController {
     //Variables:
     
     var vocaWords: [VocabularyWord] = [
-        VocabularyWord(word: "Blue", definition: "It's a color."),
+        VocabularyWord(word: "Blue:", definition: "It's a color."),
+        VocabularyWord(word: "Stipend:", definition: "A fixed regular sum paid as a salary or allowance."),
+        VocabularyWord(word: "Whim:", definition: "A sudden desire or change of mind, especially one that is unusual or unexplained"),
+        VocabularyWord(word: "Fifth Amendment:", definition: "An amendment to the Constitution that contains a number of provisions relating to criminal law, including guarantees of due process and of the right to refuse to answer questions in order to avoid incriminating oneself.")
         
     ]
 

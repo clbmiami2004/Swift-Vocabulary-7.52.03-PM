@@ -24,6 +24,7 @@ class WordsTableViewController: UITableViewController {
     
     
     // MARK: - Table view data source
+    //Functions:
 
     
 

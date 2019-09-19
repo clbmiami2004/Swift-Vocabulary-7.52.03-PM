@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,6 +35,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="st9-pe-QHU" kind="show" identifier="ShowDefinitionSegue" id="oqe-1e-7SZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,6 +50,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2O-22-aT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="184" y="113"/>
+        </scene>
+        <!--Definition View Controller-->
+        <scene sceneID="hKs-pK-Qnd">
+            <objects>
+                <viewController id="st9-pe-QHU" customClass="DefinitionViewController" customModule="Swift_Vocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NfC-0d-1tS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHQ-E6-Qjv">
+                                <rect key="frame" x="20" y="99" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eQf-lw-swf">
+                                <rect key="frame" x="20" y="128" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GHQ-E6-Qjv" firstAttribute="top" secondItem="PFa-Y4-Bwf" secondAttribute="top" constant="11" id="6dg-gk-Xc3"/>
+                            <constraint firstItem="GHQ-E6-Qjv" firstAttribute="leading" secondItem="NfC-0d-1tS" secondAttribute="leadingMargin" id="GRT-sS-QLM"/>
+                            <constraint firstItem="GHQ-E6-Qjv" firstAttribute="leading" secondItem="eQf-lw-swf" secondAttribute="leading" id="QBk-GM-sAJ"/>
+                            <constraint firstItem="PFa-Y4-Bwf" firstAttribute="trailing" secondItem="eQf-lw-swf" secondAttribute="trailing" constant="154" id="Qyc-7D-ksb"/>
+                            <constraint firstItem="eQf-lw-swf" firstAttribute="top" secondItem="GHQ-E6-Qjv" secondAttribute="bottom" constant="8" symbolic="YES" id="UI0-kn-tFw"/>
+                            <constraint firstItem="PFa-Y4-Bwf" firstAttribute="bottom" secondItem="eQf-lw-swf" secondAttribute="bottom" constant="606" id="k8c-6D-THM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PFa-Y4-Bwf"/>
+                    </view>
+                    <connections>
+                        <outlet property="definitionTextView" destination="eQf-lw-swf" id="sgz-AG-3WX"/>
+                        <outlet property="wordLabel" destination="GHQ-E6-Qjv" id="JnP-rP-85t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBT-QU-erS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jcf-JF-Xur">
